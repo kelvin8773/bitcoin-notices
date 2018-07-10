@@ -1,15 +1,11 @@
-### Python Learning Startup project - Get Bitcoin Price Notices
-
-- Date: 2018-07-10
-- Author: Kelvin Liang
-- Email: Kelvin@kelvinoffice.com
+# Python Learning Startup project - Get Bitcoin Price Notices
 
 Thanks for following authors's article
-[Reference- Rok Novosel (English)](https://realpython.com/python-bitcoin-ifttt/)
-[Reference- Python数据科学 (Chinese)](https://juejin.im/post/5ac42bcd5188255c887bd81e)
+- [Reference- Rok Novosel (English)](https://realpython.com/python-bitcoin-ifttt/)
+- [Reference- Python数据科学 (Chinese)](https://juejin.im/post/5ac42bcd5188255c887bd81e)
 
 
-# Introduction
+### Introduction
 
 A very good startup project for learning python.
 
@@ -23,23 +19,21 @@ Currently added Features:
 To continue ....
 
 
-# To Getting Start  
+### Getting Start  
 
 1. clone this project to your local drive.
 2. register IFTTT to get "IFTTT_WEBHOOKS_URL", then export it in your environment.
 
-'''
+```
 export IFTTT_WEBHOOKS_URL='https://maker.ifttt.com/trigger/{}/with/key/{Your Key}'
-'''
+```
 3. register google sheet API for save records in your google sheet.
 [get credentials.json file](http://gspread.readthedocs.io/en/latest/oauth2.html)
 
-4. Run "start-script.py" program.
-'''
-python start-script.py
+4. Run `python start-script.py` to start the program.
 
-'''
+5. Start from there, you continue add whatever features you can think of to this project.
 
+Enjoy!
 
-
-[Reference](https://realpython.com/python-bitcoin-ifttt/)
+Kelvin
