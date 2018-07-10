@@ -17,7 +17,8 @@ from datetime import datetime
 
 BITCOIN_PRICE_HIGH_THRESHOLD = 7500
 BITCOIN_PRICE_LOW_THRESHOLD = 6500
-BITCOIN_API_URL='https://api.coinmarketcap.com/v1/ticker/bitcoin/'
+BITCOIN_API_URL = 'https://api.coinmarketcap.com/v1/ticker/bitcoin/'
+# put ifttt_event_url here
 
 '''
 Hide one paramater 'IFTTT_WEBHOOKS_URL', please add by yourself due to privacy issue.
@@ -33,6 +34,7 @@ def get_latest_bitcoin_price():
     # convert the price to a floating point number
     return float(response_json[0]['price_usd'])
 
+
 def post_ifttt_webhook(event, value):
     # the payload that will be sent to IFTTT service
     data = {'value1': value}
@@ -40,6 +42,7 @@ def post_ifttt_webhook(event, value):
     ifttt_event_url = IFTTT_WEBHOOKS_URL.format(event)
     # Send a HTTP POST request to the webhook URL
     requests.post(ifttt_event_url, json=data)
+
 
 def format_bitcoin_history(bitcoin_history):
     rows = []
