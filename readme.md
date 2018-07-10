@@ -1,4 +1,5 @@
-# Learning Python Startup project - Get Bitcoin Price Notices
+# Learning Python Startup project
+> Get Bitcoin Price Notices from Telegram
 
 Thanks for following authors's article:
 - [Rok Novosel (English) - Python Project for Beginners: Bitcoin Price Notifications ](https://realpython.com/python-bitcoin-ifttt/)
