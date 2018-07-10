@@ -1,8 +1,8 @@
-# Python Learning Startup project - Get Bitcoin Price Notices
+# Learning Python Startup project - Get Bitcoin Price Notices
 
-Thanks for following authors's article
-- [Reference- Rok Novosel (English)](https://realpython.com/python-bitcoin-ifttt/)
-- [Reference- Python数据科学 (Chinese)](https://juejin.im/post/5ac42bcd5188255c887bd81e)
+Thanks for following authors's article:
+- [Rok Novosel (English) - Python Project for Beginners: Bitcoin Price Notifications ](https://realpython.com/python-bitcoin-ifttt/)
+- [Python数据科学 (Chinese) - 给Python初学者的最好练手项目](https://juejin.im/post/5ac42bcd5188255c887bd81e)
 
 
 ### Introduction
@@ -37,3 +37,6 @@ export IFTTT_WEBHOOKS_URL='https://maker.ifttt.com/trigger/{}/with/key/{Your Key
 Enjoy!
 
 Kelvin
+
+### Other Reference Links
+[gspread for google sheets documents](http://gspread.readthedocs.io/en/latest/#main-interface)
