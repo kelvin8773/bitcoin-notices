@@ -85,12 +85,12 @@ def main():
         bitcoin_history.append({'date': date, 'price': price})
 
         # Send an emegency notification
-        if price > BITCOIN_HIGH_PRICE_THRESHOLD or price < BITCOIN_PRICE_LOW_THRESHOLD:
+        if price > BITCOIN_PRICE_HIGH_THRESHOLD or price < BITCOIN_PRICE_LOW_THRESHOLD:
             post_ifttt_webhook('bitcoin_price_emergency', price)
 
         # Send a Telegram notification
         # Once we have 5 items in our bitcoin_history send an update
-        if len(bitcoin_history) > 5:
+        if len(bitcoin_history) == 5:
             messages = format_bitcoin_history(bitcoin_history)
             print(messages)
             post_ifttt_webhook('bitcoin_price_update', messages)
