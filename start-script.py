@@ -1,5 +1,5 @@
 '''
-Python Learning Startup project - Get Bitcoin Price Notices
+Learning Python Startup Project - Get Bitcoin Price Notices
 Date: 2018-07-10
 Author: Kelvin Liang
 Reference: https://realpython.com/python-bitcoin-ifttt/
@@ -15,9 +15,16 @@ import requests
 import time
 from datetime import datetime
 
-BITCOIN_PRICE_THRESHOLD = 7500
+BITCOIN_PRICE_HIGH_THRESHOLD = 7500
+BITCOIN_PRICE_LOW_THRESHOLD = 6500
 BITCOIN_API_URL='https://api.coinmarketcap.com/v1/ticker/bitcoin/'
 
+'''
+Hide one paramater 'IFTTT_WEBHOOKS_URL', please add by yourself due to privacy issue.
+It should similar like the line below:
+IFTTT_WEBHOOKS_URL='https://maker.ifttt.com/trigger/{}/with/key/{your key}'
+
+'''
 
 
 def get_latest_bitcoin_price():
@@ -40,7 +47,7 @@ def format_bitcoin_history(bitcoin_history):
         # Formats the date into a string: '24.02.2018 15:01'
         date = bitcoin_price['date'].strftime('%Y-%m-%d %H:%M:%S')
         price = bitcoin_price['price']
-         # <b> (bold) tag creates bolded text
+        # <b> (bold) tag creates bolded text
         # 24.02.2018 15:09: $<b>10123.4</b>
         row = '{}: $<b>{}</b>'.format(date, price)
         rows.append(row)
@@ -78,7 +85,7 @@ def main():
         bitcoin_history.append({'date': date, 'price': price})
 
         # Send an emegency notification
-        if price >= BITCOIN_PRICE_THRESHOLD:
+        if price > BITCOIN_HIGH_PRICE_THRESHOLD or price < BITCOIN_PRICE_LOW_THRESHOLD:
             post_ifttt_webhook('bitcoin_price_emergency', price)
 
         # Send a Telegram notification
@@ -92,7 +99,7 @@ def main():
             bitcoin_history = []
 
         # sleep for 5 mins
-        time.sleep(1*30)
+        time.sleep(5*60)
 
 
 if __name__ == '__main__':
