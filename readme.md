@@ -1,4 +1,4 @@
-# Learning Python Startup project - Get Cyptocurrencies Price Notices 
+# Learning Python Startup project - Get Cyptocurrencies Price Notices
 
 Thanks for following authors's article:
 - [Rok Novosel (English) - Python Project for Beginners: Bitcoin Price Notifications ](https://realpython.com/python-bitcoin-ifttt/)
@@ -15,6 +15,8 @@ Currently added Features:
 
 1. Send Notices to Telegram. (2018-07-03)
 2. Save Prices history to Google Sheets. (2018-07-10)
+3. Getting Ethereum Price. (2018-07-11)
+
 
 To continue ....
 

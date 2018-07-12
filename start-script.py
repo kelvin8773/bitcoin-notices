@@ -1,11 +1,11 @@
 '''
-Learning Python Startup Project - Get Bitcoin Price Notices
+Learning Python Startup Project - Get cyptocurrencies Price Notices
 Date: 2018-07-10
 Author: Kelvin Liang
 Reference: https://realpython.com/python-bitcoin-ifttt/
 
 '''
-import sys
+
 # for read & write price history to Google Sheets
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -77,8 +77,6 @@ def format_history(history):
         row = '<b>{}</b> {}: $<b>{}</b>'.format(ename, edate, eprice)
         rows.append(row)
 
-
-
     # Use a <br> (break) tag to create a new line
     # Join the rows delimited by <br> tag: row1<br>row2<br>row3
     return '<br>'.join(rows)
@@ -105,7 +103,7 @@ def main():
 
     while True:
 
-         # retrieve info from API JSON
+        # retrieve info from API JSON
         bitcoin_info = get_latest_info(BITCOIN_API_URL)
         brecord = [
                     bitcoin_info['last_updated'],
@@ -138,13 +136,13 @@ def main():
             # add to bitcoin history for messages
             history.append(
                         [
-                            {'name':'Bitcoin',
-                        'date': bitcoin_info['last_updated'],
-                        'price': bitcoin_info['price_usd']},
-                        {'name':'Ethereum',
-                        'date': ethereum_info['last_updated'],
-                        'price': ethereum_info['price_usd']}
-                        ]
+                            {'name': 'Bitcoin',
+                                'date': bitcoin_info['last_updated'],
+                                'price': bitcoin_info['price_usd']},
+                            {'name': 'Ethereum',
+                                'date': ethereum_info['last_updated'],
+                                'price': ethereum_info['price_usd']}
+                         ]
                         )
         finally:
             print("Continue to next record ....")
