@@ -16,6 +16,7 @@ Currently added Features:
 1. Send Notices to Telegram. (2018-07-03)
 2. Save Prices history to Google Sheets. (2018-07-10)
 3. Getting Ethereum Price. (2018-07-11)
+4. Add error handle mechanism make app run more robust. (2018-07-13)
 
 
 To continue ....
